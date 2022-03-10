@@ -4,7 +4,7 @@
 # Movies App
 
 
-> Classic movie ap
+> Classic movie app
 
 This is a movie app that gice us the possibility to create movies for allowed users and also rate the movies.
 
