@@ -3,7 +3,7 @@
 # Movies App
 
 
-> Classic blog website
+> Classic movie ap
 
 This is a movie app that gice us the possibility to create movies for allowed users and also rate the movies.
 
