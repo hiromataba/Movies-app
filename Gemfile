@@ -13,7 +13,7 @@ gem 'sqlite3', '~> 1.4'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 gem 'devise', '~> 4.8', '>= 4.8.1'
- 
+gem 'paperclip', '~> 6.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
