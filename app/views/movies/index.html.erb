@@ -1,5 +1,7 @@
-<p id="notice"><%= notice %></p>
+<% if @movies.length == 0 %>
+ <p>No available movies Please add some</p>
 
+<% else %>
 <h1>Movies</h1>
 
 <table>
@@ -16,7 +18,9 @@
 
   <tbody>
     <% @movies.each do |movie| %>
+    
       <tr>
+        <td><img src="<%=movie.image%>"/></td>
         <td><%= movie.title %></td>
         <td><%= movie.description %></td>
         <td><%= movie.movie_length %></td>
@@ -31,5 +35,5 @@
 </table>
 
 <br>
-
+<% end %>
 <%= link_to 'New Movie', new_movie_path %>

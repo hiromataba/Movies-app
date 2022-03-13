@@ -36,6 +36,12 @@
     <%= form.text_field :category %>
   </div>
 
+  <fieldset>
+    <%= form.label :image, 'image' %>
+    <%= form.hidden_field :image_cache %>
+    <%= form.file_field :image%>
+</fieldset>
+
   <div class="actions">
     <%= form.submit %>
   </div>
