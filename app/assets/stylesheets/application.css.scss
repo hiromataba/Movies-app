@@ -14,3 +14,18 @@
  */
 
  @import "bootstrap/scss/bootstrap";
+
+ body {
+  //  background-color: rgba(182, 168, 168, 0.281);
+ }
+
+ .gray {
+   border: 1px solid rgba(175, 166, 166, 0.726);
+   border-radius: 10px;
+   margin: 10px;
+ }
+
+ .image {
+   width: 300px;
+   height: 500px;
+ }
