@@ -3,11 +3,12 @@ class MoviesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   
   def index
-    @movies = Movie.all
+    # @movies = Movie.all
+    @movies  = Movie.paginate(:page => params[:page], :per_page=>4)
   end
 
   def show
-    # @movie = 
+    @reviews = Review.where(movie_id: @movie.id).order("created_at DESC")
   end
 
   def new

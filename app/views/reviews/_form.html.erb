@@ -12,7 +12,13 @@
   <% end %>
 
   <div class="field">
-    <div id="star-rating"></div>
+    <%
+=begin%>
+ <div id="star-rating"></div> 
+<%
+=end%>
+<%= f.label :rating %><br>
+    <%= f.text_field :rating %>
   </div>
   <div class="field">
     <%= f.label :comment %><br>

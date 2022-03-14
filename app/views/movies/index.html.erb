@@ -10,6 +10,7 @@
 <% end %>
 
 <div class="row">
+
   <% @movies.each do |movie| %>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
@@ -17,6 +18,11 @@
       </div>
     </div>
   <% end %>
+ 
 </div>
 
 <% end %>
+
+<div class='paginate'>
+  <%= will_paginate @movies, list_classes: %w(pagination justify-content-center) %>
+</div>
