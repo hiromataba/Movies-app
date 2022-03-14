@@ -8,7 +8,17 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap'
+// var jQuery = require('jquery')
+require('jquery')
+require('jquery_ujs')
+require("jquery.raty")
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+
+
+// global.$ = global.jQuery = jQuery;
+// window.$ = window.jQuery = jQuery;
