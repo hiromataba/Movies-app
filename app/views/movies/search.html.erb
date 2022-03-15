@@ -1,0 +1,10 @@
+
+<div class="row">
+  <% @movies.each do |movie| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= link_to movie do %><img src="<%=movie.image%>" class='img-responsive mt-5'/><% end %>        
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -17,10 +17,11 @@
         <% end %>
     </ul>
     
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  
+    <%= form_tag search_movies_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
+        <p>
+          <%= text_field_tag :search, params[:search], class: "form-control" %>
+        </p>
+        <p><%= submit_tag "Search", name: nil, class: "btn btn-default" %></p>
+      <% end %>
   </div>
 </nav>

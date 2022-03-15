@@ -3,7 +3,6 @@ class MoviesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   
   def index
-    # @movies = Movie.all
     @movies  = Movie.paginate(:page => params[:page], :per_page=>4)
   end
 
@@ -22,6 +21,15 @@ class MoviesController < ApplicationController
   end
 
   def edit
+  end
+
+  def search
+    if params[:search].blank?
+      redirect_to movies_path and return
+    else
+      @parameter = params[:search].downcase
+      @movies = Movie.all.where('lower(category) LIKE ?', "%#{@parameter}%")
+    end
   end
 
   def create
