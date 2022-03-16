@@ -1,5 +1,6 @@
 <% if @movies.length == 0 %>
  <p>No available movies please add some</p>
+ 
 <% else %>
 <% if !user_signed_in? %>
   <div class="jumbotron">
@@ -10,15 +11,13 @@
 <% end %>
 
 <div class="row">
-
   <% @movies.each do |movie| %>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <%= link_to movie do %><img src="<%=movie.image%>" class='img-responsive mt-5'/><% end %>
+    <div class="col-sm-6 col-md-3 img-index-container">
+      <div class="img-index">
+        <%= link_to movie do %><img src="<%=movie.image%>" class='image img-small'/><% end %>
       </div>
     </div>
   <% end %>
- 
 </div>
 
 <% end %>
@@ -26,3 +25,11 @@
 <div class='paginate'>
   <%= will_paginate @movies, list_classes: %w(pagination justify-content-center) %>
 </div>
+
+<script>
+  $('#star-rating').raty({
+    number: 10,
+    path: '/assets/',
+    scoreName: 'review[rating]'
+  });
+</script>

@@ -17,11 +17,10 @@
         <% end %>
     </ul>
     
-    <%= form_tag search_movies_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
+    <%= form_tag search_movies_path, method: :get, class: "form-inline my-2 my-lg-0", role: "search" do %>
         <p>
-          <%= text_field_tag :search, params[:search], class: "form-control" %>
-        </p>
-        <p><%= submit_tag "Search", name: nil, class: "btn btn-default" %></p>
-      <% end %>
+          <%= text_field_tag :search, params[:search], class: 'form-control mr-sm-2', placeholder: 'Search movie by category'%>
+          <%= submit_tag "Search", name: nil, class: "btn btn-light my-2 my-sm-0"  %>
+      <% end %></p>
   </div>
 </nav>
