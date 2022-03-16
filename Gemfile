@@ -20,7 +20,9 @@ gem 'will_paginate'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'will_paginate-bootstrap4'
+
 group :development, :test do
+  gem 'rspec-rails'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
