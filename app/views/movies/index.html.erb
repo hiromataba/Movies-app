@@ -4,25 +4,29 @@
 <% else %>
 <% if !user_signed_in? %>
   <div class="jumbotron">
-    <h1>Your Favorite Movies Reviewed</h1>
-    <p>Hashtag hoodie mumblecore selfies. Authentic keffiyeh leggings Kickstarter, narwhal jean shorts XOXO Vice Austin cardigan. Organic drinking vinegar freegan pickled.</p>
+    <h1>Welcome to Movies app</h1>
+    <p>This is a great app for rating your favorite movies</p>
     <p><%= link_to "Sign Up To rate a movie", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
   </div>
 <% end %>
 
-<div class="movie-container">
-  <div class="movie">
+<div class="index-container">
+  <div class="row">
     <% @movies.each do |movie| %>
-    <% if @liked %>
-			<%= button_to pluralize(movie.likes_counter, "Like"), like_path(movie.id), method: :delete, remote: true, class: "btn btn-success is-small", data: { disable_with: true } %>
-		<% else %>
-			<%= button_to pluralize(movie.likes_counter, "Like"), movie_likes_path(movie.id), method: :post, remote: true, class: "button is-primary is-small is-inverted", data: { disable_with: true } %>
-		<% end %>
-    <div class="img-index-container">
+    
+    <div class="col-sm-6 col-md-3 img-cont">
+    
       <div class="img-index">
-        <%= link_to movie do %><img src="<%=movie.image%>" class='image'/><% end %>     
+        <%= link_to movie do %><img src="<%=movie.image%>" class='image'/><% end %>
+        <% if @liked %>
+			    <%= button_to pluralize(movie.likes_counter, "Like"), like_path(movie.id), method: :delete, remote: true, class: "btn btn-success is-small", data: { disable_with: true } %>
+		    <% else %>
+			      <%= button_to pluralize(movie.likes_counter, "Like"), movie_likes_path(movie.id), method: :post, remote: true, class: "button is-primary is-small is-inverted", data: { disable_with: true } %>
+		    <% end %>     
       </div>
+      
     </div>
+      
   <% end %>
   </div>
 </div>
