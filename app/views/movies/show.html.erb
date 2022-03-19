@@ -33,7 +33,8 @@
       <div class="col-md-7 col-md-offset-1">
         <h1 class="review_title"><%= @movie.title %></h1>
         <p><%= @movie.description %></p>
-
+    <span class="button is-small is-light is-transparent is-static"><%= pluralize(@movie.likes_counter, ('like')) %></span>
+        
         <% if @reviews.blank? %>
           <h5>No reviews just yet, would you like to add the first!</h5>
           <%= link_to "Write Review", new_movie_review_path(@movie), class: "btn btn-primary" %>

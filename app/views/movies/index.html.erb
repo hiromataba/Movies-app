@@ -1,5 +1,5 @@
 <% if @movies.length == 0 %>
- <p>No available movies please add some</p>
+ <h2>No available movies please add some</h2>
  
 <% else %>
 <% if !user_signed_in? %>
@@ -10,21 +10,34 @@
   </div>
 <% end %>
 
-<div class="row">
-  <% @movies.each do |movie| %>
-    <div class="col-sm-6 col-md-3 img-index-container">
+<div class="movie-container">
+  <div class="movie">
+    <% @movies.each do |movie| %>
+    <% if @liked %>
+			<%= button_to pluralize(movie.likes_counter, "Like"), like_path(movie.id), method: :delete, remote: true, class: "btn btn-success is-small", data: { disable_with: true } %>
+		<% else %>
+			<%= button_to pluralize(movie.likes_counter, "Like"), movie_likes_path(movie.id), method: :post, remote: true, class: "button is-primary is-small is-inverted", data: { disable_with: true } %>
+		<% end %>
+    <div class="img-index-container">
       <div class="img-index">
-        <%= link_to movie do %><img src="<%=movie.image%>" class='image img-small'/><% end %>
+        <%= link_to movie do %><img src="<%=movie.image%>" class='image'/><% end %>     
       </div>
     </div>
   <% end %>
+  </div>
 </div>
+  
+  
 
 <% end %>
 
 <div class='paginate'>
   <%= will_paginate @movies, list_classes: %w(pagination justify-content-center) %>
+  
 </div>
+
+
+
 
 <script>
   $('#star-rating').raty({

@@ -3,12 +3,11 @@ class MoviesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   
   def index
-    @movies  = Movie.paginate(:page => params[:page], :per_page=>4)
+    @movies = Movie.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
   def show
-    @reviews = Review.where(movie_id: @movie.id).order("created_at DESC")
-    
+    @reviews = Review.where(movie_id: @movie.id).order("created_at DESC")    
     if @reviews.blank?
       @avg_review = 0
     else
@@ -56,6 +55,14 @@ class MoviesController < ApplicationController
         format.json { render json: @movie.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def rate
+    @movie = Movie.find(params[:movie_id])
+    @rating = Rating.new(user_id: current_user.id, movie_id: @movie.id)
+    @rating.save
+    redirect_to movies_path
+  
   end
 
   def destroy
