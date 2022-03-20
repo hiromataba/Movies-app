@@ -1,10 +1,36 @@
-
-<div class="row">
-  <% @movies.each do |movie| %>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <%= link_to movie do %><img src="<%=movie.image%>" class='img-responsive mt-5'/><% end %>        
+<div class="index-container">
+  <div class="row">
+    <% @movies.each do |movie| %>
+    
+    <div class="col-sm-6 col-md-3 img-cont">
+    
+      <div class="img-index">
+        <%= link_to movie do %><img src="<%=movie.image%>" class='image'/><% end %>
+        <% if @liked %>
+			    <%= button_to pluralize(movie.likes_counter, "Like"), like_path(movie.id), method: :delete, remote: true, class: "btn btn-success is-small", data: { disable_with: true } %>
+		    <% else %>
+			      <%= button_to pluralize(movie.likes_counter, "Like"), movie_likes_path(movie.id), method: :post, remote: true, class: "button is-primary is-small is-inverted", data: { disable_with: true } %>
+		    <% end %>     
       </div>
+      
     </div>
+      
   <% end %>
+  </div>
 </div>
+  
+  <div class='paginate'>
+  <%= will_paginate @movies, list_classes: %w(pagination justify-content-center) %>
+  
+</div>
+
+
+
+
+<script>
+  $('#star-rating').raty({
+    number: 10,
+    path: '/assets/',
+    scoreName: 'review[rating]'
+  });
+</script>
