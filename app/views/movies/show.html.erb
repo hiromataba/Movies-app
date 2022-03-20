@@ -3,7 +3,7 @@
     <div class="row cont">
       <div class="col-md-4">
         <div class="img-show"><img src="<%=@movie.image%>" alt="Movie image" class='image'/></div>
-        <div class="star-rating" data-score= <%= @avg_review %> ></div>
+        <span>Average reviews: </span><div class="star-rating" data-score= <%= @avg_review %> ></div>
         <em><%= "#{@reviews.length} reviews" %></em>
         <div class="table-responsive">
           <table class="table">

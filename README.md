@@ -8,6 +8,15 @@
 
 This is a movie app that gice us the possibility to create movies for allowed users and also rate the movies.
 
+## Home page
+
+![homepage](https://user-images.githubusercontent.com/75126481/159156165-7ace8cbb-c179-4a19-8aa9-fd3442f91375.png)
+
+## Details page
+
+
+![detail-page](https://user-images.githubusercontent.com/75126481/159156199-d52a3796-cacf-4515-9a3d-3a589a98120b.png)
+
 
 ## Built With
 
@@ -57,9 +66,6 @@ rails webpacker:install
 #run migration
 rails db:migrate
 
-#run seed
-rails db:seed
-
 #run the rails s
 rails s
 ```
@@ -90,6 +96,8 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - [jetThoughts](https://www.jetthoughts.com/)
+- [JetThoughts Team](https://www.jetthoughts.com/developers.html)
+- [Paul Keen](https://www.linkedin.com/in/paul-keen/)
 - [Rails](https://rubyonrails.org/)
 - [Ruby](https://www.ruby-lang.org/)
 - [Rspec](https://rspec.info/)
