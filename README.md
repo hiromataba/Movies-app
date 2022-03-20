@@ -76,6 +76,16 @@ rails s
 rspec
 ```
 
+### Linters
+
+```sh
+#fix ruby linters
+rubocop -A
+
+#fix css linters
+npx stylelint "**/*.{css,scss}" --fix 
+```
+
 👤 **Aganze Mataba Henri**
 
 - GitHub: [@hiromataba](https://github.com/hiromataba)
