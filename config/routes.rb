@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+   
+  devise_for :users
+  resources :movies do
+  	collection do
+  		get 'search'
+  	end
+  	resources :reviews, except: [:show, :index]
+    resources :likes, only: [:create]
+    post "/rate", to: "movies#rate"
+  end
+
+  resources :likes, only: [:destroy]
+  root 'movies#index'
 end
