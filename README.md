@@ -1,8 +1,6 @@
 ![image](https://user-images.githubusercontent.com/75126481/157625469-fa1700d8-a324-4d04-b8a8-2a4f026f1200.png)
 
-
 # Movies App
-
 
 > Classic movie app
 
@@ -14,9 +12,7 @@ This is a movie app;ication that gice us the possibility to create movies for al
 
 ## Details page
 
-
 ![detail-page](https://user-images.githubusercontent.com/75126481/159156199-d52a3796-cacf-4515-9a3d-3a589a98120b.png)
-
 
 ## Built With
 
@@ -83,7 +79,7 @@ rspec
 rubocop -A
 
 #fix css linters
-npx stylelint "**/*.{css,scss}" --fix 
+npx stylelint "**/*.{css,scss}" --fix
 ```
 
 👤 **Aganze Mataba Henri**
@@ -91,7 +87,6 @@ npx stylelint "**/*.{css,scss}" --fix
 - GitHub: [@hiromataba](https://github.com/hiromataba)
 - Twitter: [@twitterhandle](https://twitter.com/MatabaHiro)
 - LinkedIn: [Hiro Mataba](https://www.linkedin.com/in/hiro-mataba-1bb910209/)
-
 
 ## 🤝 Contributing
 
