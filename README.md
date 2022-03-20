@@ -6,7 +6,7 @@
 
 > Classic movie app
 
-This is a movie app that gice us the possibility to create movies for allowed users and also rate the movies.
+This is a movie app;ication that gice us the possibility to create movies for allowed users and also rate the movies.
 
 ## Home page
 
