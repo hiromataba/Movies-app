@@ -1,21 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.create(email: 'test@gmail.com', password: 'password' ) }
+  let(:user) { User.create(email: 'test@gmail.com', password: 'password') }
   let(:movie) do
-    described_class.create(user: user, title: 'Life in a year', description: 'great movie', rating: 'pg 13', movie_length: '1h 30m', category: 'romantic')
+    described_class.create(user: user, title: 'Life in a year', description: 'great movie', rating: 'pg 13',
+                           movie_length: '1h 30m', category: 'romantic')
   end
 
-  describe "a specification" do
-    it "should be valid" do
+  describe 'a specification' do
+    it 'should be valid' do
       expect(User.new).to be_an_instance_of(User)
     end
 
-    it "should have a email" do
+    it 'should have a email' do
       expect(user.email).to eq('test@gmail.com')
     end
 
-    it "should have a password" do
+    it 'should have a password' do
       expect(user.password).to eq('password')
     end
   end
@@ -31,5 +32,4 @@ RSpec.describe User, type: :model do
       expect(review.macro).to eq(:has_many)
     end
   end
-   
 end
