@@ -37,7 +37,7 @@
         
         <% if @reviews.blank? %>
           <h5>No reviews just yet, would you like to add the first!</h5>
-          <%= link_to "Write Review", new_movie_review_path(@movie), class: "btn btn-primary" %>
+          <%= link_to "Write Review", new_movie_review_path(@movie), class: "btn" %>
         <% else %>
           <% @reviews.each do |review| %>
             <div class="reviews">
