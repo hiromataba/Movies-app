@@ -4,20 +4,24 @@
 
 > Classic movie app
 
-This is a movie app;ication that gice us the possibility to create movies for allowed users and also rate the movies.
+This is a movie application that give us the possibility to create movies for allowed users and also rate the movies, the appliction has a homepage and a details page, You can rate a movie on the homepage without reloading the page
 
 ## Home page
 
-![homepage](https://user-images.githubusercontent.com/75126481/159156165-7ace8cbb-c179-4a19-8aa9-fd3442f91375.png)
+![moviesapp](https://user-images.githubusercontent.com/75126481/159256085-be65af18-c895-436c-a386-6f297202a2a3.png)
 
 ## Details page
 
-![detail-page](https://user-images.githubusercontent.com/75126481/159156199-d52a3796-cacf-4515-9a3d-3a589a98120b.png)
+![deatilsmoviespage](https://user-images.githubusercontent.com/75126481/159256058-067565eb-44ff-47b0-9ac9-190d6eecf60c.png)
 
 ## Built With
 
 - Ruby on Rails
 - Ruby
+
+## Live demo
+
+- [Live demo](https://hiro-movies-app.herokuapp.com/)
 
 ## Getting Started
 
@@ -78,8 +82,6 @@ rspec
 #fix ruby linters
 rubocop -A
 
-#fix css linters
-npx stylelint "**/*.{css,scss}" --fix
 ```
 
 👤 **Aganze Mataba Henri**
