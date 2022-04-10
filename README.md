@@ -2,7 +2,7 @@
 
 # Movies App
 
-> Classic movie app
+> Classic Movie app
 
 This is a movie application that give us the possibility to create movies for allowed users and also rate the movies, the appliction has a homepage and a details page, You can rate a movie on the homepage without reloading the page
 
