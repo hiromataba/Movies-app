@@ -18,6 +18,7 @@ This is a movie application that gives us the possibility to create movies for a
 
 - Ruby on Rails
 - Ruby
+- Bootstrap
 
 ## Live demo
 
