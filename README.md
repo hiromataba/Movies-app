@@ -6,7 +6,7 @@
 
 This is a movie application that gives us the possibility to create movies for allowed users and also rate the movies, the appliction has a homepage and a details page, You can like a movie on the homepage without reloading the page.
 
-## Home page
+## Home Page
 
 ![moviesapp](https://user-images.githubusercontent.com/75126481/159256085-be65af18-c895-436c-a386-6f297202a2a3.png)
 
