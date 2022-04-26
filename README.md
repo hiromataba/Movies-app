@@ -1,5 +1,3 @@
-![image](https://user-images.githubusercontent.com/75126481/157625469-fa1700d8-a324-4d04-b8a8-2a4f026f1200.png)
-
 # Movies App
 
 > Classic Movie App
