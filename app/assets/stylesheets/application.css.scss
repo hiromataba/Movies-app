@@ -9,11 +9,12 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
 
-@import 'bootstrap/scss/bootstrap';
+@import '../../..//node_modules/bootstrap//scss//bootstrap.scss';
 
 body {
   background-color: rgba(214, 214, 214, 0.931);
@@ -83,3 +84,7 @@ body {
 .show-crud {
   margin: 10px;
 }
+
+.btn {
+  color: #FFFFFF;
+  }

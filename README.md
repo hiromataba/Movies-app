@@ -1,31 +1,30 @@
-![image](https://user-images.githubusercontent.com/75126481/157625469-fa1700d8-a324-4d04-b8a8-2a4f026f1200.png)
-
-
 # Movies App
 
+> Classic Movies App.
 
-> Classic movie app
+This is a movie application that gives us the possibility to create movies for allowed users and also rate the movies, the appliction has a homepage and a details page, You can like a movie on the homepage without reloading the page...
 
-This is a movie app that gice us the possibility to create movies for allowed users and also rate the movies.
+## Home Page
 
-## Home page
-
-![homepage](https://user-images.githubusercontent.com/75126481/159156165-7ace8cbb-c179-4a19-8aa9-fd3442f91375.png)
+![moviesapp](https://user-images.githubusercontent.com/75126481/159256085-be65af18-c895-436c-a386-6f297202a2a3.png)
 
 ## Details page
 
-
-![detail-page](https://user-images.githubusercontent.com/75126481/159156199-d52a3796-cacf-4515-9a3d-3a589a98120b.png)
-
+![deatilsmoviespage](https://user-images.githubusercontent.com/75126481/159256058-067565eb-44ff-47b0-9ac9-190d6eecf60c.png)
 
 ## Built With
 
 - Ruby on Rails
 - Ruby
+- Bootstrap
+
+## Live demo
+
+- [Live demo](https://hiro-movies-app.herokuapp.com/)
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple example steps 👇
 
 ### Prerequisites
 
@@ -82,8 +81,6 @@ rspec
 #fix ruby linters
 rubocop -A
 
-#fix css linters
-npx stylelint "**/*.{css,scss}" --fix 
 ```
 
 👤 **Aganze Mataba Henri**
@@ -91,7 +88,6 @@ npx stylelint "**/*.{css,scss}" --fix
 - GitHub: [@hiromataba](https://github.com/hiromataba)
 - Twitter: [@twitterhandle](https://twitter.com/MatabaHiro)
 - LinkedIn: [Hiro Mataba](https://www.linkedin.com/in/hiro-mataba-1bb910209/)
-
 
 ## 🤝 Contributing
 
